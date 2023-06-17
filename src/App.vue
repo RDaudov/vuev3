@@ -1,15 +1,50 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <VCatalog/>
+  
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import VCatalog from './components/VCatalog.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    VCatalog
+  },
+  data() {
+    return {
+      items: [
+        {
+          id: 1,
+          image: '1.img',
+          header: 'Header1',
+          body: 'body1'
+        },
+        {
+          id: 2,
+          image: '2.img',
+          header: 'Header2',
+          body: 'body2'
+        },
+        {
+          id: 3,
+          image: '3.img',
+          header: 'Header3',
+          body: 'body3'
+        },
+        {
+          id: 4,
+          image: '4.img',
+          header: 'Header4',
+          body: 'body4'
+        },
+        
+      ],
+    }
   }
 }
 </script>
