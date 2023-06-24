@@ -7,7 +7,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import VCatalog from './components/VCatalog.vue'
+import VCatalog from './components/VTaskList.vue'
 
 export default {
   name: 'App',

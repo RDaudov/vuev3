@@ -1,20 +1,20 @@
 <template>
-    <div class="v-catalog">
-        <h1>Catalog</h1>
-        <div class="v-catalog-list">
-            <VCatalogitem v-for="item in items" :key="item.id" :item="item" @fromChild="callFromChild"/>
+    <div class="v-tasklist">
+        <h1>Tasklist</h1>
+        <div class="v-tasklist-items">
+            <VTaskListItem v-for="item in items" :key="item.id" :item="item" @fromChild="callFromChild"/>
         </div>
         <button @click="getData">123213</button>
     </div>
 </template>
 
 <script>
-import VCatalogitem from './VCatalog-item.vue'
+import VTaskListItem from './VTaskListItem.vue'
 
 export default {
-    name: 'v-catalog',
+    name: 'v-tasklist',
     components: {
-        VCatalogitem
+        VTaskListItem
     },
     data() {
         return {
@@ -66,14 +66,14 @@ export default {
 </script>
 
 <style scoped>
-.v-catalog {
+.v-tasklist {
     display: flex;
     flex-direction: column;
     max-width: 900px;
     margin: auto;
 }
 
-.v-catalog-list {
+.v-tasklist-items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
     gap: 15px;

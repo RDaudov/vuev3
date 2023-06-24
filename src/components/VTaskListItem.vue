@@ -10,7 +10,7 @@
 
 <script>
 export default {
-    name: "v-catalog-item",
+    name: "v-tasklist-item",
     props: {
         item: {
             default() {
