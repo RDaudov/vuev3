@@ -4,6 +4,7 @@
         <div class="v-catalog-list">
             <VCatalogitem v-for="item in items" :key="item.id" :item="item" @fromChild="callFromChild"/>
         </div>
+        <button @click="getData">123213</button>
     </div>
 </template>
 
@@ -54,6 +55,11 @@ export default {
     methods: {
         callFromChild(e) {
             console.log(e);
+        },
+        getData() {
+            fetch('http://localhost:3000/items')
+            .then(res => res.json())
+            .then(ss=> console.log(ss))
         }
     }
 }
