@@ -1,9 +1,8 @@
 <template>
     <div class="wrap">
-        <img :src="require('../assets/images/' + item.image) " alt="image" class="image">
-        <p>{{ item.name }}</p>
-        <p>{{ item.price }}</p>
-        <button @click="sendToParent"> Add to cart</button>
+        <p>{{ item.task }}</p>
+        <p>{{ item.description }}</p>
+        <button @click="sendToParent">Delete</button>
     </div>
   
 </template>

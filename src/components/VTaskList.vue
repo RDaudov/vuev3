@@ -21,33 +21,28 @@ export default {
             items: [
                 {
                     id: 1,
-                    image: '1.jpg',
-                    name: 'Header1',
-                    price: '100'
+                    header: 'Header1',
+                    description: 'do it1'
                 },
                 {
                     id: 2,
-                    image: '2.jpg',
                     name: 'Header3',
-                    price: '200'
+                    description: 'do it2'
                 },
                 {
                     id: 3,
-                    image: '3.jpg',
                     name: 'Header3',
-                    price: '300'
+                    description: 'do it3'
                 },
                 {
                     id: 4,
-                    image: '4.jpg',
                     name: 'Header4',
-                    price: '400'
+                    description: 'do it4'
                 },
                 {
                     id: 5,
-                    image: '5.jpg',
                     name: 'Header5',
-                    price: '500'
+                    description: 'do it5'
                 },
             ]
         }

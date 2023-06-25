@@ -1,19 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <VCatalog/>
-  
+  <VTaskList/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import VCatalog from './components/VTaskList.vue'
+import VTaskList from './components/VTaskList.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    VCatalog
+    VTaskList
   },
   data() {
     return {
