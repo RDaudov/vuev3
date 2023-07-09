@@ -2,19 +2,20 @@
     <div class="v-tasklist">
         <h1>Tasklist</h1>
         <div class="v-tasklist-items">
-            <VTaskListItem v-for="item in items" :key="item.id" :item="item" @fromChild="callFromChild"/>
+            <VTask v-for="item in ITEMS" :key="item.id" :item="item" @fromChild="callFromChild" />
         </div>
         <button @click="getData">123213</button>
     </div>
 </template>
 
 <script>
-import VTaskListItem from './VTaskListItem.vue'
+import VTask from './VTask'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
     name: 'v-tasklist',
     components: {
-        VTaskListItem
+        VTask
     },
     data() {
         return {
@@ -47,15 +48,25 @@ export default {
             ]
         }
     },
+    computed: {
+        ...mapGetters([
+            'ITEMS'
+        ])
+    },
     methods: {
+        ...mapActions(['GET_ITEMS']),
         callFromChild(e) {
             console.log(e);
         },
         getData() {
-            fetch('http://localhost:3000/items')
-            .then(res => res.json())
-            .then(ss=> console.log(ss))
+            // fetch('http://localhost:3000/items')
+            //     .then(res => res.json())
+            //     .then(ss => console.log(ss))
+            console.log(this.items)
         }
+    },
+    mounted() {
+        this.GET_ITEMS()
     }
 }
 </script>

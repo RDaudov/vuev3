@@ -1,9 +1,10 @@
 <template>
-  <VTaskList/>
+  <VTaskList v-bind:items="items" />
+  <button @click="click">213</button>
 </template>
 
 <script>
-import VTaskList from './components/VTaskList.vue'
+import VTaskList from './components/VTaskList'
 
 export default {
   name: 'App',
@@ -15,30 +16,35 @@ export default {
       items: [
         {
           id: 1,
-          image: '1.img',
           header: 'Header1',
-          body: 'body1'
+          description: 'do it1'
         },
         {
           id: 2,
-          image: '2.img',
-          header: 'Header2',
-          body: 'body2'
+          name: 'Header3',
+          description: 'do it2'
         },
         {
           id: 3,
-          image: '3.img',
-          header: 'Header3',
-          body: 'body3'
+          name: 'Header3',
+          description: 'do it3'
         },
         {
           id: 4,
-          image: '4.img',
-          header: 'Header4',
-          body: 'body4'
+          name: 'Header4',
+          description: 'do it4'
         },
-        
-      ],
+        {
+          id: 5,
+          name: 'Header5',
+          description: 'do it5'
+        },
+      ]
+    }
+  },
+  methods: {
+    click() {
+      console.log(this.refs);
     }
   }
 }

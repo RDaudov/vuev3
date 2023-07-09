@@ -3,32 +3,32 @@
         {
             "id": 1,
             "image": "1.jpg",
-            "name": "Header1",
-            "price": "100"
+            "task": "Header1",
+            "description": "100"
         },
         {
             "id": 2,
             "image": "2.jpg",
-            "name": "Header3",
-            "price": "200"
+            "task": "Header3",
+            "description": "200"
         },
         {
             "id": 3,
             "image": "3.jpg",
-            "name": "Header3",
-            "price": "300"
+            "task": "Header3",
+            "description": "300"
         },
         {
             "id": 4,
             "image": "4.jpg",
-            "name": "Header4",
-            "price": "400"
+            "task": "Header4",
+            "description": "400"
         },
         {
             "id": 5,
             "image": "5.jpg",
-            "name": "Header5",
-            "price": "500"
+            "task": "Header5",
+            "description": "5500"
         }
     ]
 }

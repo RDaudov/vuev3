@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: "v-tasklist-item",
+    name: "v-task",
     props: {
         item: {
             default() {
@@ -44,7 +44,5 @@ export default {
         height: 300px;
     }
 
-    .image {
-        overflow: auto;
-    }
+
 </style>
