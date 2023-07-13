@@ -1,5 +1,6 @@
 <template>
   <h1>CART</h1>
+  <v-cart-item/>
 </template>
 
 <script>

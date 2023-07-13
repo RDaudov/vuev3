@@ -2,24 +2,25 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
   <VCatalog/>
+  <VCart v-if="CART.length"/>
   
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import VCatalog from './components/v-catalog.vue'
+import VCart from './components/v-cart.vue'
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    VCatalog
+    VCatalog,
+    VCart
   },
   data() {
     return {
-      items: [
-      ],
     }
   },
   computed: {

@@ -2,9 +2,9 @@
     <div class="v-catalog">
         <h1>Catalog</h1>
         <div class="v-catalog-list">
-            <VCatalogItem v-for="item in ITEMS" :key="item.id" :item="item" @fromChild="callFromChild"/>
+            <VCatalogItem v-for="item in ITEMS" :key="item.id" :item="item" @AddToCart="AddToCart" />
         </div>
-        <button @click="GET_ITEMS">123213</button>
+        <button @click="AddToCart">123213</button>
     </div>
 </template>
 
@@ -19,25 +19,24 @@ export default {
     },
     data() {
         return {
-            
+
         }
     },
     computed: {
         ...mapGetters([
-            'ITEMS'
+            'ITEMS',
+            'CART'
         ])
     },
     methods: {
-        ...mapActions(['GET_ITEMS']),
-        callFromChild(e) {
-            console.log(e);
+        ...mapActions([
+            'GET_ITEMS',
+            'ADD_TO_CART'
+        ]),
+        AddToCart(e) {
+            this.ADD_TO_CART(e)
+            console.log(this.CART);
         },
-        getData() {
-            // fetch('http://localhost:3000/items')
-            //     .then(res => res.json())
-            //     .then(ss => console.log(ss))
-            console.log(this.items)
-        }
     },
     mounted() {
         this.GET_ITEMS()

@@ -3,7 +3,7 @@
         <img :src="require('../assets/images/' + item.image) " alt="image" class="image">
         <p>{{ item.name }}</p>
         <p>{{ item.price }}</p>
-        <button @click="sendToParent"> Add to cart</button>
+        <button @click="AddToCart"> Add to cart</button>
     </div>
   
 </template>
@@ -23,8 +23,8 @@ export default {
     },
     computed: {},
     methods: {
-        sendToParent() {
-            this.$emit('fromChild', this.item)
+        AddToCart() {
+            this.$emit('AddToCart', this.item)
         }
     }
 
@@ -47,5 +47,6 @@ export default {
 
     .image {
         overflow: auto;
+        width: 100%;
     }
 </style>
