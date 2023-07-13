@@ -7,7 +7,8 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import VCatalog from './components/VCatalog.vue'
+import VCatalog from './components/v-catalog.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'App',
@@ -18,36 +19,13 @@ export default {
   data() {
     return {
       items: [
-        {
-          id: 1,
-          image: '1.img',
-          header: 'Header1',
-          body: 'body1'
-        },
-        {
-          id: 2,
-          image: '2.img',
-          header: 'Header2',
-          body: 'body2'
-        },
-        {
-          id: 3,
-          image: '3.img',
-          header: 'Header3',
-          body: 'body3'
-        },
-        {
-          id: 4,
-          image: '4.img',
-          header: 'Header4',
-          body: 'body4'
-        },
-        
       ],
     }
+  },
+  computed: {
+    ...mapGetters(['CART'])
   }
-}
-</script>
+}</script>
 
 <style>
 #app {
